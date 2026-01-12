@@ -33,9 +33,6 @@ test-integration: ## Run integration tests only
 test-coverage: ## Run tests with coverage report
 	uv run pytest --cov=src --cov-report=term-missing --cov-report=html
 
-notebook: ## Start Jupyter notebook server
-	uv run jupyter notebook
-
 clean: ## Clean up cache and temporary files
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
